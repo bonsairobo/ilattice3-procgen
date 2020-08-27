@@ -1,0 +1,16 @@
+[package]
+name = "ilattice3-procgen"
+version = "0.1.0"
+authors = ["Duncan <bonsairobo@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+fnv = "1.0"
+ilattice3 = { git = "https://github.com/bonsairobo/ilattice3.git" }
+log = "0.4"
+petgraph = "0.5"
+rand = { version = "0.7", features = ["small_rng"] }
+rand_distr = "0.3"
+ron = "0.6"
+serde = { version = "1.0", features = ["derive"] }
+streaming-stats = "0.2"
