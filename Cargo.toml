@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 fnv = "1.0"
-ilattice3 = { git = "https://github.com/bonsairobo/ilattice3.git", rev = "0d722d94" }
+ilattice3 = { git = "https://github.com/bonsairobo/ilattice3.git", rev = "9586551f" }
 log = "0.4"
 petgraph = "0.5"
 rand = { version = "0.7", features = ["small_rng"] }

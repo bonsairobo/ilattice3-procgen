@@ -22,9 +22,11 @@ pub const FLOOR_VOXEL: Voxel = Voxel {
 };
 
 pub fn fill_map_with_rooms(rooms: &[Extent], encoder: &mut impl VoxelEncoder) {
+    let wall_thickness = 5;
     for r in rooms.iter() {
-        for e in r.get_boundary_extents().iter() {
-            for p in e {
+        let r_interior = r.radial_grow(-wall_thickness);
+        for p in r {
+            if !r_interior.contains_world(&p) {
                 // TODO: check the plane of the wall to determine if it's a floor, ceiling, etc.
                 encoder.encode_voxel(&p, &FLOOR_VOXEL);
             }
